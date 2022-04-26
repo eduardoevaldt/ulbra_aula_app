@@ -351,10 +351,168 @@ class PaginaInicialState extends State<PaginaInicial> {
           ),
         ),
         drawer: Drawer(
-          child: Container(
-            color: Colors.black87,
+            child: Container(
+          color: Colors.black87,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/avatar.jpg'),
+                      radius: 30,
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 10)),
+                    Text('Eduardo',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('ALUNO ',
+                            style: TextStyle(color: Colors.grey, fontSize: 12)),
+                        Icon(
+                          Icons.check_circle_rounded,
+                          color: Colors.grey,
+                          size: 15,
+                        ),
+                      ],
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 8)),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.grey[700],
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.laptop_chromebook,
+                  color: Colors.grey,
+                ),
+                title: Text('Salas virtuais',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.assignment,
+                  color: Colors.grey,
+                ),
+                title: Text('Anotações de aula',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.book,
+                  color: Colors.grey,
+                ),
+                title: Text('Avaliação institucional',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.mail_outline,
+                  color: Colors.grey,
+                ),
+                title: Text('Avisos',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.military_tech,
+                  color: Colors.grey,
+                ),
+                title: Text('Desempenho',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.leaderboard,
+                  color: Colors.grey,
+                ),
+                title: Text('Frequência',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.import_contacts,
+                  color: Colors.grey,
+                ),
+                title: Text('Laboratório virtual',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.insert_drive_file,
+                  color: Colors.grey,
+                ),
+                title: Text('Materiais de apoio',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.chat_bubble_outline,
+                  color: Colors.grey,
+                ),
+                title: Text('Mensagens',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.local_library,
+                  color: Colors.grey,
+                ),
+                title: Text('Minha biblioteca',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.school,
+                  color: Colors.grey,
+                ),
+                title: Text('Minhas turmas',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.book,
+                  color: Colors.grey,
+                ),
+                title: Text('Person',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+              ),
+              ListTile(
+                contentPadding: EdgeInsets.only(left: 40),
+                leading: Icon(
+                  Icons.logout,
+                  color: Colors.grey,
+                ),
+                title: Text('Sair',
+                    style: TextStyle(color: Colors.grey, fontSize: 16)),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
           ),
-        ),
+        )),
         body: _salasVirtuais(),
         backgroundColor: Colors.grey[200],
       ),
